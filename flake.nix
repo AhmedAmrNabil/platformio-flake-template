@@ -17,6 +17,7 @@
         SETTINGS_FILE=.vscode/settings.json
         TMP=$(mktemp)
         # create empty json if missing
+        mkdir -p .vscode
         [ -f "$SETTINGS_FILE" ] || echo '{}' > "$SETTINGS_FILE"
 
         ${pkgs.jq}/bin/jq \
