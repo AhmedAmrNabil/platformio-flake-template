@@ -1,2 +1,5 @@
 .pio
 .platformio
+.vscode
+.envrc
+.direnv
