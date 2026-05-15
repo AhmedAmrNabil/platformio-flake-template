@@ -47,7 +47,7 @@
 
           ${configureVscodeSettings}
 
-          if [ ! -f $PLATFORMIO_VENV_DIR/bin/activate ]; then
+          if [ ! -f $PLATFORMIO_VENV_DIR/bin/activate ]|| ! "$PLATFORMIO_VENV_DIR/bin/python" --version &>/dev/null; then
             echo "Initializing PlatformIO environment..."
             curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
             python3 get-platformio.py
